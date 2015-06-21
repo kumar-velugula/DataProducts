@@ -1,0 +1,29 @@
+---
+title: "Diabetes Prediction with Age factor"
+author: "Kumar Velugula"
+date: "June 21, 2015"
+output: html_document
+---
+
+This document describes both the ui.R and server.R files deployed to Shiny app server with a sample app predicting diabetes based on user inputs glucose and age.
+
+##Shiny appy url: <http://kumar-velugula.shinyapps.io/DataProducts>
+
+1. The above link takes you to the shinyapp server hosted website and launches Diabetes Prediction app.
+2. App expects two inputs from the user: 1. Glucose level (mg/dl) and 2. Age in years
+3. Prediction algorithm is very simple(present in the server.R) and is defined on the website itself.
+```{r echo=FALSE}
+function(glucose, age) { 
+        if(age < 30) 
+                glucose*age/(200*100)
+        else
+                glucose/200
+}
+```
+4. After entering the input, user has to click Submit to  view the prediction.
+5. Once the Submit button is clicked and operation is processed on the server and prediction values are returned along with the original inputs for glucose and age values. 
+6. Outputs are displayed in the right panel.
+
+##Files included  
+* ui.R  
+* server.R  
