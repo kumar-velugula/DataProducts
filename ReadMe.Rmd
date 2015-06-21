@@ -7,6 +7,13 @@ output: html_document
 
 This document describes both the ui.R and server.R files deployed to Shiny app server with a sample app predicting diabetes based on user inputs glucose and age.
 
+##Followed below steps to deploy the app to the shinyapps server
+* Created an account on shinyapps.io  
+* Installed shinyapps package using command: devtools::install_github('rstudio/shinyapps')  
+* Authenticated my computer with the security token command copied from above website and ran in R console on my computer  
+* Deployed both ui.R and server.R using command with path pointing to the folder where the files are located: shinyapps::deployApp('DataProducts')  
+
+
 ##Shiny appy url: <http://kumar-velugula.shinyapps.io/DataProducts>
 
 1. The above link takes you to the shinyapp server hosted website and launches Diabetes Prediction app.
